@@ -14,6 +14,6 @@ module "mysql" {
   ENV                    = var.ENV
 }
 
-output "redis" {
-    value = module.redis.redis 
-}
+# output "redis" {
+#     value = module.redis.redis 
+# }
