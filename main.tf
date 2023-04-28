@@ -32,5 +32,5 @@ module "mysql" {
 # }
 
 output "data" {
-    value = module.mongodb.data
+    value = module.docdb.data
 }
