@@ -31,6 +31,3 @@ module "mysql" {
 #     value = module.redis.redis 
 # }
 
-output "data" {
-    value = module.docdb.data
-}
