@@ -30,3 +30,7 @@ module "mysql" {
 # output "redis" {
 #     value = module.redis.redis 
 # }
+
+output "data" {
+    value = module.mongodb.data
+}
