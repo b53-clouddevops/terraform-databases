@@ -23,9 +23,15 @@ module "mysql" {
   MYSQL_RDS_STORAGE         = var.MYSQL_RDS_STORAGE
   MYSQL_RDS_ENGINE_VERSION  = var.MYSQL_RDS_ENGINE_VERSION
   MYSQL_RDS_INSTANCE_TYPE   = var.MYSQL_RDS_INSTANCE_TYPE
-
-
 }
+
+# Provisioning RabbitMQ on EC2
+module "rabbitmq" {
+  source               = "./vendor/modules/rabbitmq"     # Terrafile is going to download the code from the respective branch of the repo and keeps it local
+  ENV                  = var.ENV
+  RABBITMQ_PORT        = var.RABBITMQ_PORT
+}
+
 
 # output "redis" {
 #     value = module.redis.redis 
